@@ -1,0 +1,28 @@
+=== CLOUDFLARE DEPLOYMENT INSTRUCTIONS ===
+
+STEP 1: Deploy the Pre-Built Version (Easiest)
+----------------------------------------------
+1. Extract this ZIP file
+2. Go to https://dash.cloudflare.com/
+3. Navigate to Pages → Create a project
+4. Choose "Upload assets"
+5. Drag and drop the "dist" folder
+6. Done! Your site is live
+
+STEP 2: Deploy from GitHub (For Future Updates)
+------------------------------------------------
+1. Push this entire folder to GitHub
+2. In Cloudflare Pages → New project → Connect to Git
+3. Select your repository
+4. Build settings:
+   - Build command: pnpm build
+   - Build output directory: dist/public
+5. Deploy!
+
+IMPORTANT NOTES:
+- All images are in dist/images/ (32 files, ~6.4 MB)
+- The dist/public/ folder is what Cloudflare serves
+- If you edit the site, run "pnpm build" locally first
+- Then redeploy the dist/ folder
+
+Questions? Check CLOUDFLARE_DEPLOY.md for more details.
